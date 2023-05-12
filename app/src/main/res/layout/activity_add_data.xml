@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcome_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/custom_font"
+        android:text="Welcome!"
+        android:textColor="@color/btnBG"
+        android:textSize="45sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/paragraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/custom_font"
+        android:text="Add Your Task be Punctual"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_heading" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paragraph" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#ffffffff"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg"
+                android:drawableStart="@drawable/tag"
+                android:drawablePadding="18dp"
+                android:drawableTint="@color/btnBG"
+                android:ems="10"
+                android:fontFamily="@font/custom_font"
+                android:hint="Enter your title"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/eDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg"
+                android:drawableStart="@drawable/calendar"
+                android:drawablePadding="18dp"
+                android:drawableTint="@color/btnBG"
+                android:fontFamily="@font/custom_font"
+                android:minHeight="48dp"
+                android:padding="20dp"
+                android:text="Select Date" />
+
+            <TextView
+                android:id="@+id/eTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg"
+                android:drawableStart="@drawable/clock"
+                android:drawablePadding="18dp"
+                android:drawableTint="@color/btnBG"
+                android:fontFamily="@font/custom_font"
+                android:minHeight="48dp"
+                android:padding="20dp"
+                android:text="Select Time" />
+
+
+            <EditText
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg"
+                android:drawableStart="@drawable/notes"
+                android:drawablePadding="18dp"
+                android:drawableTint="@color/btnBG"
+                android:ems="10"
+                android:fontFamily="@font/custom_font"
+                android:hint="Enter your note"
+                android:inputType="textPersonName"
+                android:padding="20dp" />
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="@font/custom_font"
+                android:text="Save" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
