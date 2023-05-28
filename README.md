@@ -1,1 +1,1 @@
-![Gif](Todo App.gif)
+![GIF](Todo App.gif)
